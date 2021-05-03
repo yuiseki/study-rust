@@ -6,7 +6,7 @@
 - https://www.rust-lang.org/ja/learn/get-started
 - http://doc.rust-jp.rs/book-ja/
 
------ ----- -----
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 ## Install on Ubuntu 20.04
 
 ```bash
@@ -14,7 +14,7 @@ curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 ```
 
------ ----- -----
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 ## 作業用ディレクトリ＆gitリポジトリを作る
 
 今回は勉強のために一つのディレクトリに複数のrustプロジェクトを置く。
@@ -29,7 +29,7 @@ git add .
 git commit -m "init"
 ```
 
------ ----- -----
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 ## Hello worldをやってみる
 
 - https://www.rust-lang.org/ja/learn/get-started#generating-new-project
@@ -54,7 +54,7 @@ git add .
 git commit -m "add hello-rust"
 ```
 
------ ----- -----
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 ## Packageを使ってみる
 
 - https://www.rust-lang.org/ja/learn/get-started#installing-dependencies
@@ -115,7 +115,7 @@ git commit -m "add hello-ferris"
 ```
 
 
------ ----- -----
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 ## HTTP serverでも作ってみる
 
 - https://doc.rust-jp.rs/book-ja/ch20-01-single-threaded.html
@@ -129,7 +129,6 @@ cd ..
 cargo new hello-http --bin
 cd hello-http
 ```
-
 
 #### git管理対象に追加する
 
@@ -215,3 +214,26 @@ cargo run
 git add .
 git commit -m "add hello-http"
 ```
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+## ライブラリを作ってテストを実装してみる
+
+#### rustプロジェクトの生成
+
+```bash
+cd ..
+cargo new hello-lib-test --lib
+cd hello-lib-test
+```
+
+#### git管理対象に追加する
+
+```bash
+git add .
+git commit -m "add hello-lib-test"
+```
+
+#### コードを書く
+
+
+
