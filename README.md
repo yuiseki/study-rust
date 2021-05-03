@@ -27,6 +27,8 @@ git commit -m "init"
 
 ## Hello world
 
+- https://www.rust-lang.org/ja/learn/get-started#generating-new-project
+
 ```
 cargo new hello-rust
 cd hello-rust
@@ -44,6 +46,9 @@ git commit -m "add hello-rust"
 ```
 
 ## Using package
+
+- https://www.rust-lang.org/ja/learn/get-started#installing-dependencies
+- https://www.rust-lang.org/ja/learn/get-started#a-small-rust-app
 
 ```
 cargo new hello-ferris
