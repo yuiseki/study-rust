@@ -14,10 +14,15 @@ source $HOME/.cargo/env
 
 ## Make temporary workspace
 
+今回は勉強のために一つのディレクトリに複数のrustプロジェクトを置く。
+
 ```
 mkdir study-rust
 cd study-rust
 git init
+touch README.md
+git add .
+git commit -m "init"
 ```
 
 ## Hello world
@@ -25,8 +30,17 @@ git init
 ```
 cargo new hello-rust
 cd hello-rust
-sudo rm -rf .git
 cargo run
+```
+
+`cargo new` コマンドで生成されたディレクトリはgitリポジトリになっているが、
+今回は一つのgitリポジトリに複数のrustプロジェクトを配置したいので、
+`.git` ディレクトリを削除する。
+
+```
+sudo rm -rf .git
+git add .
+git commit -m "add hello-rust"
 ```
 
 ## Using package
@@ -34,7 +48,6 @@ cargo run
 ```
 cargo new hello-ferris
 cd hello-ferris
-sudo rm -rf .git
 ```
 
 edit `hello-ferris/Cargo.toml`
@@ -64,3 +77,8 @@ fn main() {
 
 `cargo run`
 
+```
+sudo rm -rf .git
+git add .
+git commit -m "add hello-ferris"
+```
