@@ -5,6 +5,7 @@
 - https://www.rust-lang.org/ja
 - https://www.rust-lang.org/ja/learn/get-started
 
+----- ----- -----
 ## Install on Ubuntu 20.04
 
 ```
@@ -12,6 +13,7 @@ curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 ```
 
+----- ----- -----
 ## 作業用ディレクトリ＆gitリポジトリを作る
 
 今回は勉強のために一つのディレクトリに複数のrustプロジェクトを置く。
@@ -25,6 +27,7 @@ git add .
 git commit -m "init"
 ```
 
+----- ----- -----
 ## Hello worldをやってみる
 
 - https://www.rust-lang.org/ja/learn/get-started#generating-new-project
@@ -35,10 +38,6 @@ git commit -m "init"
 cargo new hello-rust
 cd hello-rust
 ```
-
-#### rustプロジェクトの実行
-
-`cargo run`
 
 #### `.git` を削除
 
@@ -52,6 +51,11 @@ git add .
 git commit -m "add hello-rust"
 ```
 
+#### rustプロジェクトの実行
+
+`cargo run`
+
+----- ----- -----
 ## Packageを使ってみる
 
 - https://www.rust-lang.org/ja/learn/get-started#installing-dependencies
@@ -63,6 +67,14 @@ git commit -m "add hello-rust"
 cd ..
 cargo new hello-ferris
 cd hello-ferris
+```
+
+#### `.git` を削除
+
+```
+sudo rm -rf .git
+git add .
+git commit -m "add hello-ferris"
 ```
 
 #### 依存Packageの追加
@@ -100,10 +112,48 @@ fn main() {
 
 `cargo run`
 
-#### `.git` を 削除
+#### 変更をコミット
 
 ```
-sudo rm -rf .git
 git add .
-git commit -m "add hello-ferris"
+git commit -m "update hello-ferris"
 ```
+
+
+----- ----- -----
+## HTTP serverでも作ってみる
+
+- https://doc.rust-jp.rs/book-ja/ch20-01-single-threaded.html
+- https://doc.rust-jp.rs/book-ja/ch20-02-multithreaded.html
+- https://qiita.com/sogrnwil/items/42fd032999b39f595324
+
+#### rustプロジェクトの生成
+
+```
+cd ..
+cargo new hello-http --bin
+cd hello-http
+```
+
+#### `.gitignore` を 追加
+
+```
+echo "/target" > .gitignore
+```
+
+#### git管理対象に追加する
+
+```
+git add .
+git commit -m "add hello-http"
+```
+
+#### コードを書く
+
+https://github.com/yuiseki/study-rust/blob/main/hello-http/src/main.rs
+
+#### rust プロジェクトの実行
+
+`cargo run`
+
+ブラウザで http://localhost:3000/ を開く
