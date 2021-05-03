@@ -8,7 +8,7 @@
 ----- ----- -----
 ## Install on Ubuntu 20.04
 
-```
+```bash
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 ```
@@ -18,7 +18,7 @@ source $HOME/.cargo/env
 
 今回は勉強のために一つのディレクトリに複数のrustプロジェクトを置く。
 
-```
+```bash
 mkdir study-rust
 cd study-rust
 git init
@@ -35,18 +35,20 @@ git commit -m "init"
 
 #### rustプロジェクトの生成
 
-```
+```bash
 cargo new hello-rust
 cd hello-rust
 ```
 
 #### rustプロジェクトの実行
 
-`cargo run`
+```bash
+cargo run
+```
 
 #### 変更をコミット
 
-```
+```bash
 git add .
 git commit -m "add hello-rust"
 ```
@@ -59,7 +61,7 @@ git commit -m "add hello-rust"
 
 #### rustプロジェクトの生成
 
-```
+```bash
 cd ..
 cargo new hello-ferris
 cd hello-ferris
@@ -69,20 +71,22 @@ cd hello-ferris
 
 edit `hello-ferris/Cargo.toml`
 
-```
+```toml
 [dependencies]
 ferris-says = "0.2"
 ```
 
 #### 依存Packageのインストール
 
-`cargo build`
+```bash
+cargo build
+```
 
 #### Packageを使う
 
 edit `hello-ferris/src/main.rs`
 
-```
+```rust
 use ferris_says::say;
 use std::io::{stdout, BufWriter};
 
@@ -98,11 +102,13 @@ fn main() {
 
 #### rust プロジェクトの実行
 
-`cargo run`
+```bash
+cargo run
+```
 
 #### 変更をコミット
 
-```
+```bash
 git add .
 git commit -m "add hello-ferris"
 ```
@@ -117,7 +123,7 @@ git commit -m "add hello-ferris"
 
 #### rustプロジェクトの生成
 
-```
+```bash
 cd ..
 cargo new hello-http --bin
 cd hello-http
@@ -126,7 +132,7 @@ cd hello-http
 
 #### git管理対象に追加する
 
-```
+```bash
 git add .
 git commit -m "add hello-http"
 ```
@@ -137,13 +143,15 @@ https://github.com/yuiseki/study-rust/blob/main/hello-http/src/main.rs
 
 #### rust プロジェクトの実行
 
-`cargo run`
+```bash
+cargo run
+```
 
 ブラウザで http://localhost:3000/ を開く
 
 #### 変更をコミット
 
-```
+```bash
 git add .
 git commit -m "add hello-http"
 ```
