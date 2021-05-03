@@ -23,6 +23,7 @@ mkdir study-rust
 cd study-rust
 git init
 touch README.md
+echo "target" > .gitignore
 git add .
 git commit -m "init"
 ```
@@ -39,21 +40,16 @@ cargo new hello-rust
 cd hello-rust
 ```
 
-#### `.git` を削除
-
-`cargo new` コマンドで生成されたディレクトリはgitリポジトリになっているが、
-今回は一つのgitリポジトリに複数のrustプロジェクトを配置したいので、
-`.git` ディレクトリを削除する。
-
-```
-sudo rm -rf .git
-git add .
-git commit -m "add hello-rust"
-```
-
 #### rustプロジェクトの実行
 
 `cargo run`
+
+#### 変更をコミット
+
+```
+git add .
+git commit -m "add hello-rust"
+```
 
 ----- ----- -----
 ## Packageを使ってみる
@@ -67,14 +63,6 @@ git commit -m "add hello-rust"
 cd ..
 cargo new hello-ferris
 cd hello-ferris
-```
-
-#### `.git` を削除
-
-```
-sudo rm -rf .git
-git add .
-git commit -m "add hello-ferris"
 ```
 
 #### 依存Packageの追加
@@ -116,7 +104,7 @@ fn main() {
 
 ```
 git add .
-git commit -m "update hello-ferris"
+git commit -m "add hello-ferris"
 ```
 
 
@@ -135,11 +123,6 @@ cargo new hello-http --bin
 cd hello-http
 ```
 
-#### `.gitignore` を 追加
-
-```
-echo "/target" > .gitignore
-```
 
 #### git管理対象に追加する
 
@@ -157,3 +140,10 @@ https://github.com/yuiseki/study-rust/blob/main/hello-http/src/main.rs
 `cargo run`
 
 ブラウザで http://localhost:3000/ を開く
+
+#### 変更をコミット
+
+```
+git add .
+git commit -m "add hello-http"
+```
