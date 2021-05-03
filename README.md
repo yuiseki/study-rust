@@ -12,7 +12,7 @@ curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 ```
 
-## Make temporary workspace
+## 作業用ディレクトリ＆gitリポジトリを作る
 
 今回は勉強のために一つのディレクトリに複数のrustプロジェクトを置く。
 
@@ -25,15 +25,22 @@ git add .
 git commit -m "init"
 ```
 
-## Hello world
+## Hello worldをやってみる
 
 - https://www.rust-lang.org/ja/learn/get-started#generating-new-project
+
+### rustプロジェクトの生成
 
 ```
 cargo new hello-rust
 cd hello-rust
-cargo run
 ```
+
+### rustプロジェクトの実行
+
+`cargo run`
+
+### `.git` を削除
 
 `cargo new` コマンドで生成されたディレクトリはgitリポジトリになっているが、
 今回は一つのgitリポジトリに複数のrustプロジェクトを配置したいので、
@@ -45,15 +52,20 @@ git add .
 git commit -m "add hello-rust"
 ```
 
-## Using package
+## Packageを使ってみる
 
 - https://www.rust-lang.org/ja/learn/get-started#installing-dependencies
 - https://www.rust-lang.org/ja/learn/get-started#a-small-rust-app
 
+### rustプロジェクトの生成
+
 ```
+cd ..
 cargo new hello-ferris
 cd hello-ferris
 ```
+
+### 依存Packageの追加
 
 edit `hello-ferris/Cargo.toml`
 
@@ -62,7 +74,11 @@ edit `hello-ferris/Cargo.toml`
 ferris-says = "0.2"
 ```
 
+### 依存Packageのインストール
+
 `cargo build`
+
+### Packageを使う
 
 edit `hello-ferris/src/main.rs`
 
@@ -80,7 +96,11 @@ fn main() {
 }
 ```
 
+### rust プロジェクトの実行
+
 `cargo run`
+
+### `.git` を 削除
 
 ```
 sudo rm -rf .git
