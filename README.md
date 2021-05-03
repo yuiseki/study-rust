@@ -1,9 +1,10 @@
 # study-rust
 
-## Document
+## Official Document
 
 - https://www.rust-lang.org/ja
 - https://www.rust-lang.org/ja/learn/get-started
+- http://doc.rust-jp.rs/book-ja/
 
 ----- ----- -----
 ## Install on Ubuntu 20.04
